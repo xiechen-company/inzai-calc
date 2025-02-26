@@ -106,19 +106,32 @@
 
         function generateHourOptions(selectId) {
             const hourSelect = document.getElementById(selectId);
-
-            // 清空選單內容
-            hourSelect.innerHTML = "";
-
-            // 生成 0 到 23 小時選項
-            for (let hour = 0; hour < 24; hour++) {
+            hourSelect.innerHTML = ""; // 清空選單內容
+        
+            // **時辰對應的地支**
+            const hourMapping = [
+                "子時", "丑時", "丑時", "寅時", "寅時", "卯時",
+                "卯時", "辰時", "辰時", "巳時", "巳時", "午時",
+                "午時", "未時", "未時", "申時", "申時", "酉時",
+                "酉時", "戌時", "戌時", "亥時", "亥時", "子時"
+            ];
+        
+            // **從 23 時（子時）開始排序**
+            for (let hour = 23; hour < 24; hour++) {
                 let option = document.createElement("option");
                 option.value = hour;
-                option.textContent = `${hour} 時`;
+                option.textContent = `${hour} 時 (${hourMapping[hour]})`;
+                hourSelect.appendChild(option);
+            }
+            for (let hour = 0; hour < 23; hour++) {
+                let option = document.createElement("option");
+                option.value = hour;
+                option.textContent = `${hour} 時 (${hourMapping[hour]})`;
                 hourSelect.appendChild(option);
             }
         }
-
+        
+        
         // 初始化小時選單
         document.addEventListener("DOMContentLoaded", function () {
             generateHourOptions("hourSelect");

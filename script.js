@@ -335,9 +335,9 @@
                 let totalDebt = calculateTotalDebt(v, lunarYear, lunarMonth, lunarDay, isLeapMonth);
                 console.log(`🔥 四柱陰債總計: ${totalDebt+7000} ~ ${totalDebt+62000} 貫`);
                 document.getElementById("resultText").value = 
-                `🙏 小編有請法師幫您查詢，法師指示：\n` +
-                `📜 由於您未提供時辰，系統計算出生時間 **0 時至 23 時** 的陰債範圍如下：📅\n` +
-                `💰 陰債可能範圍：${totalDebt + 7000} ~ ${totalDebt + 62000} 貫 🔥`;
+                `小編有請法師幫您查詢，法師指示：\n` +
+                `由於您未提供時辰，系統計算出生時間 **0 時至 23 時** 的陰債範圍如下：\n` +
+                `陰債可能範圍：${totalDebt + 7000} ~ ${totalDebt + 62000} 貫`;
 
 
             } else {
@@ -353,8 +353,8 @@
             let totalDebt = calculateTotalDebt(v, lunarYear, lunarMonth, lunarDay, isLeapMonth);
             console.log(`🔥 四柱陰債總計: ${totalDebt} 貫`);
             document.getElementById("resultText").value = 
-            `🙏 小編有請法師幫您查詢，法師指示：\n` +
-            `📜 依照您給的生辰所計算出，您所欠的陰債共為冥間紙錢：\n` +
-            `💰 **${totalDebt} 貫** 🔥`;
+            `小編有請法師幫您查詢，法師指示：\n` +
+            `依照您給的生辰所計算出，您所欠的陰債共為冥間紙錢：\n` +
+            `**${totalDebt} 貫**`;
             }
         });

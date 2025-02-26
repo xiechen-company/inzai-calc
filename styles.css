@@ -1,0 +1,47 @@
+body {
+    background-color: #f8f9fa;
+    font-family: "Noto Sans TC", Arial, sans-serif;
+}
+.container {
+    max-width: 480px;
+    background: white;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.result-box {
+    background: #fff3cd;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffeeba;
+    font-size: 18px;
+    font-weight: bold;
+    color: #856404;
+    text-align: center;
+}
+.copyable {
+    cursor: pointer;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+}
+.copyable:hover {
+    background: #e9ecef;
+}
+#copyMessage {
+    color: green;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+}
+footer {
+    font-size: 14px;
+    padding: 15px;
+    color: #7bb5e7;
+    text-align: center;
+}

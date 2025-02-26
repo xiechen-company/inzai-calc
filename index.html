@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陰債計算機</title>
+
+    <!-- ✅ 引入 Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ✅ 引入自訂 CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-center text-danger fw-bold">💰 陰債計算機</h2>
+
+        <!-- 📌 日期選擇區 -->
+        <div class="mb-3">
+            <label for="yearSelect" class="form-label">選擇年份（西元年）：</label>
+            <select id="yearSelect" class="form-select"></select>
+        </div>
+
+        <div class="mb-3">
+            <label for="monthSelect" class="form-label">選擇月份：</label>
+            <select id="monthSelect" class="form-select"></select>
+        </div>
+
+        <div class="mb-3">
+            <label for="daySelect" class="form-label">選擇日期：</label>
+            <select id="daySelect" class="form-select"></select>
+        </div>
+
+        <div class="mb-3">
+            <label for="hourSelect" class="form-label">選擇小時：</label>
+            <select id="hourSelect" class="form-select"></select>
+            <div class="form-check mt-2">
+                <input type="checkbox" id="unknownHour" class="form-check-input">
+                <label for="unknownHour" class="form-check-label">不知道生辰</label>
+            </div>
+        </div>
+
+        <!-- 📌 按鈕 -->
+        <button type="submit" id="selectSubmit" class="btn btn-danger w-100">送出查詢</button>
+
+        <!-- 📌 結果區 -->
+        <div class="result-box mt-3">
+            <label for="resultText" class="form-label">查詢結果：</label>
+            <textarea id="resultText" class="form-control" rows="4" readonly></textarea>
+        </div>
+
+        <p id="copyMessage" class="text-success mt-2">✅ 已複製到剪貼簿！</p>
+
+        <!-- 📌 可複製的金文 -->
+        <hr>
+        <p class="fw-bold">📜 點擊以下內容即可複製</p>
+        <p id="jinwen" class="copyable">《道藏》經云：「一切眾生命屬天曹，身繫地府，當得人身之日，曾於地府所屬冥司借貸祿庫受生錢財。凡在生時付清借貸者，為人富貴、健康、無災；負欠冥司者，在世窮乏、多病、多災。」</p>
+
+        <hr>
+        <p id="ad" class="copyable">
+            💡 建議您陰債要還完，財運和運勢才會改善，事業會更順利！ 📈💼<br>
+            ✨ 小編也有收到很多粉絲的反饋，還完陰債後，健康 🏥 和感情 💕 都有變好哦！💖<br>
+            🧧 日後想再來做補財庫、開庫城，才會比較容易感受到效果！ 🎊🎯
+        </p>
+    </div>
+    <footer class="text-center text-muted mt-5">
+        <p>2025 © 劦辰傳媒 By JunYan Chen</p>
+    </footer>
+    <!-- ✅ Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+
+
+    <script src="./paipan.js"></script>
+    <script src="./script.js"></script>
+
+
+</body>
+</html>
